@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- main css -->
+    <link rel="stylesheet" href="./main.css" />
+    <!--font awesome--->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <title>BUDGET APP</title>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-11 mx-auto pt-3">
+          <!-- title -->
+          <h3 class="text-uppercase mb-4" style="border-bottom: 1px solid #000">
+            BUDGET APP
+          </h3>
+          <div class="row">
+            <div class="col-md-7">
+              <!-- app info -->
+              <div class="row my-3">
+                <div class="col-4 text-center mb-2">
+                  <h6 class="text-uppercase info-title">budget</h6>
+                  <span class="budget-icon"
+                    ><i class="fas fa-money-bill-alt"></i
+                  ></span>
+                  <h4 class="text-uppercase mt-2 budget" id="budget">
+                    <span>$</span><span id="budget-amount">0</span>
+                  </h4>
+                </div>
+                <div class="col-4 text-center">
+                  <h6 class="text-uppercase info-title">expenses</h6>
+                  <span class="expense-icon"
+                    ><i class="far fa-credit-card"></i
+                  ></span>
+                  <h4 class="text-uppercase mt-2 expense" id="expense">
+                    <span>$ </span><span id="expense-amount">0</span>
+                  </h4>
+                </div>
+                <div class="col-4 text-center">
+                  <h6 class="text-uppercase info-title">balance</h6>
+                  <span class="balance-icon"
+                    ><i class="fas fa-dollar-sign"></i
+                  ></span>
+                  <h4 class="text-uppercase mt-2 balance" id="balance">
+                    <span>$ </span><span id="balance-amount">0</span>
+                  </h4>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-5 my-3">
+              <!-- budget feedback -->
+              <div class="budget-feedback alert alert-danger text-capitalize">
+                budget feedback
+              </div>
+              <!-- budget form -->
+              <form id="budget-form" class="budget-form">
+                <h5 class="text-capitalize">please enter your budget</h5>
+                <div class="form-group">
+                  <input
+                    type="number"
+                    class="form-control budget-input"
+                    id="budget-input"
+                  />
+                </div>
+                <!-- submit button -->
+                <button
+                  type="submit"
+                  class="btn text-capitalize budget-submit btn-success mt-2"
+                  id="budget-submit"
+                >
+                  calculate
+                </button>
+              </form>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-7 my-3">
+              <!-- expense list -->
+              <div class="expense-list" id="expense-list">
+                <div
+                  class="expense-list__info d-flex justify-content-between text-capitalize"
+                >
+                  <h5 class="list-item">expense title</h5>
+                  <h5 class="list-item">expense value</h5>
+                  <h5 class="list-item"></h5>
+                </div>
+
+                <!-- end of single expense -->
+              </div>
+            </div>
+            <div class="col-md-5 my-3">
+              <!-- expense feedback -->
+              <div class="expense-feedback alert alert-danger text-capitalize">
+                expense feedback
+              </div>
+              <!-- expense form -->
+              <form id="expense-form" class="expense-form">
+                <h5 class="text-capitalize">please enter your expense</h5>
+                <div class="form-group">
+                  <input
+                    type="text"
+                    class="form-control expense-input"
+                    id="expense-input"
+                  />
+                </div>
+                <h5 class="text-capitalize">please enter expense amount</h5>
+                <div class="form-group">
+                  <input
+                    type="number"
+                    class="form-control expense-input"
+                    id="amount-input"
+                  />
+                </div>
+                <!-- submit button -->
+                <button
+                  type="submit"
+                  class="btn text-capitalize expense-submit btn-danger mt-2"
+                  id="expense-submit"
+                >
+                  add expense
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- jquery -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.min.js"
+      integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+      crossorigin="anonymous"
+    ></script>
+    <!-- bootstrap js -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+    <!-- script js -->
+    <script src="./app.js"></script>
+  </body>
+</html>
